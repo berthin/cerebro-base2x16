@@ -1,0 +1,15 @@
+.wrapper {
+  align-self: flex-start;
+  width: 100%;
+  margin: -10px;
+  position: relative;
+  transition: all .3s linear;
+}
+
+
+.numberBox {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
