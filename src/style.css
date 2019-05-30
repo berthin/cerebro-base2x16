@@ -6,10 +6,3 @@
   transition: all .3s linear;
 }
 
-
-.numberBox {
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin-right: 10px;
-}

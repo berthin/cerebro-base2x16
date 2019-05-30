@@ -3,13 +3,20 @@
 /**
  * Core modules
  */
-import React from 'react'
-import Preview from './preview'
+import Preview from './preview.js'
+import iconPath from './icon128.png'
 
 /**
- * Variables used by this module
+ * Variables used on cerebro to export the plugin
  */
-import icon from './icon128.png'
+
+const id = 'base2x16'
+export const icon = iconPath
+export const keyword = 'base2x16'
+
+/**
+ * Variables used in this module
+ */
 
 const NUMBER_REGEXP = /^(\d+)?(0x[\da-fA-F]+)?(0b[01]+)?$/
 
@@ -46,7 +53,7 @@ class BaseConverter {
 /**
  * Plugin
  */
-const plugin = ({term, display, actions}) => {
+export const fn = ({term, display, actions}) => {
   try {
     let number = new BaseConverter(term);
 
@@ -57,25 +64,13 @@ const plugin = ({term, display, actions}) => {
     }
 
     display({
-      icon,
-      title: `Conversion for number ${term}`,
-      getPreview: () => (
-        <Preview number={ numbers } actions={ actions } />
-      )
+      id: id,
+      icon: icon,
+      title: `Conversion for ${term}`,
+      getPreview: () => <Preview number={ numbers } actions={ actions } />
     });
   } catch (e) {
     // provided string cannot be parsed as integer
     // do-nothing
   }
-};
-
-/**
- * Variables used on cerebro to export the plugin
- */
-
-module.exports = {
-  fn: plugin,
-  name: 'base2x16',
-  keyword: 'base2x16',
-  icon
 };

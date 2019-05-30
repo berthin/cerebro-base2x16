@@ -1,7 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+/**
+ * Core modules
+ */
 import { KeyboardNav, KeyboardNavItem } from 'cerebro-ui'
 import styles from './style.css'
 
+/**
+ * Main module
+ */
 export default ({ number, actions }) => (
   <div className={styles.wrapper}>
     <KeyboardNav>
