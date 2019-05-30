@@ -1,5 +1,5 @@
 {
-  "name": "base2x16",
+  "name": "cerebro-base2x16",
   "version": "1.0.0",
   "description": "Convert a number to a different (Dec, Hex, and Bin) base.",
   "license": "MIT",

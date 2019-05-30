@@ -3,22 +3,14 @@
 /**
  * Core modules
  */
-//const React = require('react')
-//const Preview = require('./preview.js')
 import React from 'react'
 import Preview from './preview'
 
 /**
- * Variables used on cerebro
- */
-//const icon = require('./icon128.png')
-import icon from './icon128.png'
-
-export const name = 'Convert numbers to hex, bin, and dec.'
-
-/**
  * Variables used by this module
  */
+import icon from './icon128.png'
+
 const NUMBER_REGEXP = /^(\d+)?(0x[\da-fA-F]+)?(0b[01]+)?$/
 
 /**
@@ -52,9 +44,9 @@ class BaseConverter {
 }
 
 /**
- * Function called by cerebro
+ * Plugin
  */
-export const fn = ({term, display, actions}) => {
+const plugin({term, display, actions}) => {
   try {
     let number = new BaseConverter(term);
 
@@ -75,4 +67,15 @@ export const fn = ({term, display, actions}) => {
     // provided string cannot be parsed as integer
     // do-nothing
   }
+};
+
+/**
+ * Variables used on cerebro to export the plugin
+ */
+
+module.exports = {
+  fn: plugin,
+  name: 'base2x16',
+  keyword: 'base2x16',
+  icon
 };
