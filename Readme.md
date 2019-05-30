@@ -2,7 +2,7 @@
 
 Converts a number to decimal, hexadecimal, and binary.
 
-![](howitworks.gif)
+![](demo.gif)
 
 ## Usage
 
