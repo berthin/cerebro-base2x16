@@ -46,7 +46,7 @@ class BaseConverter {
 /**
  * Plugin
  */
-const plugin({term, display, actions}) => {
+const plugin = ({term, display, actions}) => {
   try {
     let number = new BaseConverter(term);
 
