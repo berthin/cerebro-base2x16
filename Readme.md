@@ -21,4 +21,5 @@ In Cerebro, type a number in decimal, hexadecimal, or binary base.
 ## License
 
 MIT © Berthin Torres
+
 Icon designed by Freepik from www.flaticon.com
