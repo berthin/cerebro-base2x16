@@ -1,6 +1,6 @@
 {
   "name": "cerebro-base2x16",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert a number to a different (Dec, Hex, and Bin) base.",
   "license": "MIT",
   "repository": "https://github.com/berthin/cerebro-base2x16",

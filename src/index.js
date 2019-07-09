@@ -55,7 +55,7 @@ class BaseConverter {
  */
 export const fn = ({term, display, actions}) => {
   try {
-    let number = new BaseConverter(term);
+    let number = new BaseConverter(String(eval(term)));
 
     const numbers = {
       dec: number.dec,
